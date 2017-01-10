@@ -21,8 +21,13 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const docsActive = includes(this.props.location.pathname, '/docs/')
-    const examplesActive = includes(this.props.location.pathname, '/examples/')
+    // const docsActive = includes(this.props.location.pathname, '/docs/')
+    const faqActive = includes(this.props.location.pathname, '/faq/')
+    const blogActive = includes(this.props.location.pathname, '/blog/')
+    const ueberunsActive = includes(this.props.location.pathname, '/ueber-uns/')
+    const sicherheitActive = includes(this.props.location.pathname, '/sicherheit/')
+    const kostenActive = includes(this.props.location.pathname, '/kosten/')
+    const anlagekonzeptActive = includes(this.props.location.pathname, '/anlagekonzept/')
 
     return (
       <div>
@@ -64,9 +69,9 @@ module.exports = React.createClass({
               </Span>
               <Span columns={8} last>
                 <Link
-                    to={prefixLink('/examples/')}
+                    to={prefixLink('/faq/')}
                     style={{
-                        background: examplesActive ? activeColors.bg : colors.bg,
+                        background: faqActive ? activeColors.bg : colors.bg,
                         color: 'white',
                         float: 'right',
                         textDecoration: 'none',
@@ -81,9 +86,9 @@ module.exports = React.createClass({
                   FAQ
                 </Link>
               <Link
-                  to={prefixLink('/docs/')}
+                  to={prefixLink('/blog/')}
                   style={{
-                      background: docsActive ? activeColors.bg : colors.bg,
+                      background: blogActive ? activeColors.bg : colors.bg,
                       color: 'white',
                       float: 'right',
                       textDecoration: 'none',
@@ -98,9 +103,9 @@ module.exports = React.createClass({
                   Blog
                 </Link>
                 <Link
-                  to={prefixLink('/examples/')}
+                  to={prefixLink('/ueber-uns/')}
                   style={{
-                    background: examplesActive ? activeColors.bg : colors.bg,
+                    background: ueberunsActive ? activeColors.bg : colors.bg,
                     color: 'white',
                     float: 'right',
                     textDecoration: 'none',
@@ -115,9 +120,9 @@ module.exports = React.createClass({
                   Über uns
                 </Link>
                 <Link
-                  to={prefixLink('/examples/')}
+                  to={prefixLink('/sicherheit/')}
                   style={{
-                    background: examplesActive ? activeColors.bg : colors.bg,
+                    background: sicherheitActive ? activeColors.bg : colors.bg,
                       color: 'white',
                     float: 'right',
                     textDecoration: 'none',
@@ -132,9 +137,9 @@ module.exports = React.createClass({
                   Sicherheit
                 </Link>
                 <Link
-                  to={prefixLink('/examples/')}
+                  to={prefixLink('/kosten/')}
                   style={{
-                    background: examplesActive ? activeColors.bg : colors.bg,
+                    background: kostenActive ? activeColors.bg : colors.bg,
                       color: 'white',
                     float: 'right',
                     textDecoration: 'none',
@@ -149,9 +154,9 @@ module.exports = React.createClass({
                   Kosten
                 </Link>
                 <Link
-                  to={prefixLink('/examples/')}
+                  to={prefixLink('/anlagekonzept/')}
                   style={{
-                    background: examplesActive ? activeColors.bg : colors.bg,
+                    background: anlagekonzeptActive ? activeColors.bg : colors.bg,
                       color: 'white',
                     float: 'right',
                     textDecoration: 'none',
